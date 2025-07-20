@@ -3,134 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกี่ยวกับฉัน | Mood Maket</title>
+    <title>เกี่ยวกับเรา | Mood Maket</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #E3D095 0%, #7965C1 100%);
-            min-height: 100vh;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #0E2148;
-            padding: 18px 48px;
-            color: #fff;
-            box-shadow: 0 2px 12px rgba(14,33,72,0.15);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 2.2em;
-            letter-spacing: 2px;
-            text-shadow: 1px 2px 8px rgba(72,58,160,0.13);
-            color: #E3D095;
-            margin-left: 40px;
-        }
-        .menu {
-            list-style: none;
-            display: flex;
-            gap: 24px;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-        }
-        .menu li {
-            display: inline;
-        }
-        .menu a {
-            color: #E3D095;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 500;
-            padding: 8px 18px;
-            border-radius: 6px;
-            transition: background 0.2s, color 0.2s;
-        }
-        .menu a:hover {
-            background: #483AA0;
-            color: #fff;
-        }
-        .main-content {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: calc(100vh - 120px);
+            font-family: 'Kanit', Arial, sans-serif;
+            background: linear-gradient(120deg, #65cdf6 0%, #b985fd 100%);
+            margin: 0; padding: 0;
         }
         .about-container {
+            max-width: 700px;
+            margin: 60px auto;
             background: #fff;
             border-radius: 18px;
-            box-shadow: 0 4px 32px rgba(72,58,160,0.10);
-            padding: 40px 30px 32px 30px;
-            max-width: 420px;
+            box-shadow: 0 8px 32px rgba(60,60,60,0.12);
+            padding: 40px 30px 30px 30px;
             text-align: center;
         }
         h1 {
-            color: #483AA0;
-            font-size: 2.3rem;
-            font-weight: 700;
+            color: #ff7e5f;
             margin-bottom: 18px;
         }
-        p {
-            color: #0E2148;
-            font-size: 1.15rem;
-            margin-bottom: 18px;
-        }
-        .avatar {
-            width: 110px;
-            height: 110px;
+        .about-logo {
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 18px;
-            box-shadow: 0 4px 18px rgba(72,58,160,0.13);
+            border: 3px solid #7965C1;
+            box-shadow: 0 2px 8px rgba(255,126,95,0.12);
         }
-        footer {
-            background: #0E2148;
-            color: #E3D095;
-            text-align: center;
-            padding: 18px 10px 12px 10px;
+        p {
+            color: #444;
+            font-size: 1.15em;
+            line-height: 1.8;
+        }
+        .about-highlight {
+            color: #7965C1;
+            font-weight: bold;
+        }
+        .about-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            margin: 25px 0 10px 0;
+        }
+        .about-item {
+            background: #fff7f0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(255,126,95,0.07);
+            padding: 12px 22px;
+            color: f#ff7e5;
+            font-weight: 500;
             font-size: 1em;
-            letter-spacing: 1px;
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 100;
+            min-width: 120px;
         }
-        @media (max-width: 900px) {
-            .about-container {
-                padding: 28px 8vw 18px 8vw;
-            }
+        @media (max-width: 700px) {
+            .about-container { padding: 15px; }
+            .about-list { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Mood Maket</div>
-        <ul class="menu">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="About.html">เกี่ยวกับ</a></li>
-            <li><a href="Products.html">สินค้า</a></li>
-            <li><a href="contack.html">ติดต่อ</a></li>
-        </ul>
-    </nav>
-    <div class="main-content" style="width:100%;">
-        <div class="about-container">
-            <img src="https://i.imgur.com/8Km9tLL.png" alt="Avatar" class="avatar">
-            <h1>เกี่ยวกับฉัน</h1>
-            <p>สวัสดีค่ะ! ฉันชื่อ [ชื่อของคุณ] เป็นผู้สร้าง Mood Maket<br>
-            ชอบแบ่งปันความสุขและแรงบันดาลใจให้กับทุกคน<br>
-            หวังว่าเว็บไซต์นี้จะช่วยเติมเต็มวันดีๆ ให้กับคุณนะคะ 😊</p>
+    <div class="about-container">
+        <img class="about-logo" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=256&q=80" alt="Mood Maket Logo">
+        <h1>เกี่ยวกับเรา</h1>
+        <p>
+            <span class="about-highlight">Mood Maket</span> ร้านขายสินค้าจิปาถะออนไลน์<br>
+            เราคัดสรรสินค้าหลากหลายประเภท ไม่ว่าจะเป็นของใช้ในบ้าน เครื่องเขียน แฟชั่น อุปกรณ์ไอที และอีกมากมาย<br>
+            เพื่อให้ลูกค้าได้เลือกสรรในราคาสบายใจ พร้อมบริการที่ใส่ใจในทุกรายละเอียด
+        </p>
+        <div class="about-list">
+            <div class="about-item">ของใช้ในบ้าน</div>
+            <div class="about-item">เครื่องเขียน</div>
+            <div class="about-item">แฟชั่น</div>
+            <div class="about-item">อุปกรณ์ไอที</div>
+            <div class="about-item">ของขวัญ</div>
+            <div class="about-item">ของตกแต่ง</div>
         </div>
+        <p>
+            <span class="about-highlight">"ครบ จบ ในที่เดียว"</span><br>
+            ขอบคุณที่ไว้วางใจเลือก Mood Maket ให้เป็นส่วนหนึ่งในทุกวันของคุณ
+        </p>
     </div>
-    <footer>
-        &copy; 2025 Mood Maket | สร้างแรงบันดาลใจในทุกวันของคุณ
-    </footer>
-</body>
-</html>

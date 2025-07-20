@@ -3,9 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Products - สินค้ายอดฮิต</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e3f0ff 0%, #b3d1f7 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        header {
+            background: linear-gradient(90deg, #6db3f2 0%, #1e69de 100%);
+            color: #fff;
+            padding: 28px 0 18px 0;
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 2.2em;
+            font-weight: bold;
+            box-shadow: 0 2px 12px rgba(60,80,160,0.08);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 28px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(60,80,160,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #2a4a7a;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+            font-size: 2.1em;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px 28px;
+        }
+        .product-card {
+            background: #eaf4fb;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(60,80,160,0.07);
+            padding: 22px 16px 18px 16px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1.5px solid #b3d1f7;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 12px 32px rgba(60,80,160,0.13);
+            background: #fff;
+        }
+        .product-img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 14px;
+            border: 2px solid #b3d1f7;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(60,80,160,0.06);
+        }
+        .product-name {
+            font-size: 1.13rem;
+            font-weight: 600;
+            color: #2a4a7a;
+            margin-bottom: 8px;
+        }
+        .product-desc {
+            font-size: 0.97rem;
+            color: #4a6a8a;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 1.1rem;
+            color: #1e69de;
+            font-weight: bold;
+        }
+        footer {
+            background: linear-gradient(90deg, #6db3f2 0%, #1e69de 100%);
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 12px 0;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+            .container {
+                padding: 18px 4vw 12px 4vw;
+            }
+        }
+    </style>
 </head>
 <body>
-    12345
+    <header>
+        Mood Maket - สินค้ายอดฮิต
+    </header>
+    <div class="container">
+        <h1>สินค้ายอดฮิต ตกแต่งบ้านน่ารักๆ</h1>
+        <div class="products-grid">
+            <!-- สินค้าตัวอย่าง (คัดลอกเพิ่มได้) -->
+            <div class="product-card">
+                <img class="product-img" src="c:\Users\302-Master\Desktop\แจกันดอกไม้เซรามิก.jpg" alt="แจกันดอกไม้เซรามิก">
+                <div class="product-name">แจกันดอกไม้เซรามิก</div>
+                <div class="product-desc">แจกันทรงกลมสีขาว เหมาะกับการตกแต่งห้องนั่งเล่นหรือโต๊ะทำงาน</div>
+                <div class="product-price">฿199</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="c:\Users\302-Master\Desktop\โคมไฟหมีน้อย.jpg" alt="โคมไฟหมีน้อย">
+                <div class="product-name">โคมไฟหมีน้อย</div>
+                <div class="product-desc">โคมไฟ LED รูปหมีน่ารัก ให้แสงอบอุ่น เหมาะกับห้องนอน</div>
+                <div class="product-price">฿299</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="c:\Users\302-Master\Desktop\หมอนอิงลายเมฆ.jpg" alt="หมอนอิงลายเมฆ">
+                <div class="product-name">หมอนอิงลายเมฆ</div>
+                <div class="product-desc">หมอนอิงผ้ากำมะหยี่นุ่มลายเมฆ สีขาวฟ้า</div>
+                <div class="product-price">฿159</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="c:\Users\302-Master\Desktop\39015556-1.jpg" alt="นาฬิกาแขวนผนัง">
+                <div class="product-name">นาฬิกาแขวนผนัง</div>
+                <div class="product-desc">นาฬิกาแขวนดีไซน์มินิมอล สีขาว ดูเรียบง่าย</div>
+                <div class="product-price">฿249</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="c:\Users\302-Master\Desktop\ชั้นไม้สนวางประถางต้นไม้เล็ก-3-ชั้น.jpg" alt="กระถางต้นไม้จิ๋ว">
+                <div class="product-name">กระถางต้นไม้จิ๋ว</div>
+                <div class="product-desc">กระถางต้นไม้ขนาดเล็ก เหมาะสำหรับวางบนโต๊ะหรือชั้นวางของ</div>
+                <div class="product-price">฿89</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="c:\Users\302-Master\Desktop\HDR_0005_3_1.jpg" alt="กรอบรูปไม้">
+                <div class="product-name">กรอบรูปไม้</div>
+                <div class="product-desc">กรอบรูปไม้สีอ่อน เพิ่มความอบอุ่นให้บ้าน</div>
+                <div class="product-price">฿129</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        ร้าน Mood Maket - ของใช้ตกแต่งบ้านน่ารักๆ
+    </footer>
 </body>
-</html>
+</html>0
