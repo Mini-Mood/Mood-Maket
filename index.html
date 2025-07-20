@@ -1,11 +1,224 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Mood Maket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+      min-height: 100vh;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #3498db;
+      padding: 18px 48px;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(52,152,219,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 2.2em;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+    }
+    .menu li {
+      display: inline;
+    }
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .menu a:hover {
+      background: #217dbb;
+      color: #ffeb3b;
+    }
+    .hero {
+      width: 100%;
+      min-height: 340px;
+      background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px 32px 20px;
+      box-sizing: border-box;
+    }
+    .hero-img {
+      width: 260px;
+      max-width: 90vw;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(52,152,219,0.18);
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      color: #217dbb;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .hero-desc {
+      color: #444;
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .section {
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(52,152,219,0.10);
+      padding: 40px 30px 32px 30px;
+    }
+    .section h2 {
+      color: #217dbb;
+      margin-bottom: 18px;
+      font-size: 1.6em;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .product-card {
+      background: #f7fbff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(52,152,219,0.08);
+      padding: 18px 16px 14px 16px;
+      width: 220px;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .product-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(52,152,219,0.13);
+    }
+    .product-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .product-title {
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 6px;
+      font-size: 1.1em;
+    }
+    .product-desc {
+      color: #555;
+      font-size: 0.98em;
+      margin-bottom: 0;
+    }
+    .contact {
+      font-size: 1.08em;
+      color: #333;
+      margin-top: 18px;
+    }
+    footer {
+      background: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 18px 10px 12px 10px;
+      margin-top: 48px;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 900px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        padding: 28px 8vw 18px 8vw;
+      }
+    }
+  </style>
 </head>
 <body>
-    12345
+  <nav class="navbar">
+    <div class="logo">Mood Maket</div>
+    <ul class="menu">
+      <li><a href="#">หน้าแรก</a></li>
+      <li><a href="#about">เกี่ยวกับ</a></li>
+      <li><a href="#products">สินค้า</a></li>
+      <li><a href="#contact">ติดต่อ</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Mood Maket">
+    <div class="hero-title">Mood Maket</div>
+    <div class="hero-desc">ร้านไลฟ์สไตล์และของขวัญสุดชิค<br>สร้างแรงบันดาลใจและความสุขในทุกวัน</div>
+  </section>
+  <section class="section" id="about">
+    <h2>เกี่ยวกับร้าน</h2>
+    <p style="font-size:1.08em; color:#333; line-height:1.7;">
+      Mood Maket คือร้านที่รวบรวมของตกแต่งบ้าน เครื่องเขียน ของขวัญ และสินค้าไลฟ์สไตล์ที่คัดสรรมาอย่างดี<br>
+      เน้นดีไซน์ทันสมัย คุณภาพเยี่ยม และบรรยากาศอบอุ่น เหมาะกับทุกเพศทุกวัย<br>
+      พบกับโปรโมชั่นและกิจกรรมสร้างแรงบันดาลใจตลอดปี
+    </p>
+  </section>
+  <section class="section" id="products">
+    <h2>สินค้าแนะนำ</h2>
+    <div class="products">
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="ของตกแต่งบ้าน">
+        <div class="product-title">ของตกแต่งบ้าน</div>
+        <div class="product-desc">เพิ่มบรรยากาศให้บ้านของคุณด้วยของตกแต่งดีไซน์เก๋</div>
+      </div>
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="เครื่องเขียน">
+        <div class="product-title">เครื่องเขียน</div>
+        <div class="product-desc">เครื่องเขียนน่ารัก สีสันสดใส เหมาะกับทุกวัย</div>
+      </div>
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="ของขวัญ">
+        <div class="product-title">ของขวัญ</div>
+        <div class="product-desc">ของขวัญสุดพิเศษสำหรับคนสำคัญในทุกโอกาส</div>
+      </div>
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="สินค้าไลฟ์สไตล์">
+        <div class="product-title">สินค้าไลฟ์สไตล์</div>
+        <div class="product-desc">ไอเท็มเสริมความสุขและแรงบันดาลใจในชีวิตประจำวัน</div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <h2>ติดต่อเรา</h2>
+    <div class="contact">
+      โทร: 02-123-4567<br>
+      อีเมล: moodmaket@email.com<br>
+      Facebook: <a href="#" style="color:#3498db; text-decoration:underline;">Mood Maket</a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Mood Maket. All rights reserved.
+  </footer>
 </body>
 </html>
