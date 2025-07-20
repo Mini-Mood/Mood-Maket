@@ -1,14 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>เกี่ยวกับฉัน | Mood Maket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 50%, #7b2ff2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            width: 100%;
+            background: linear-gradient(90deg, #43cea2 0%, #7b2ff2 100%);
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 12px rgba(67,206,162,0.12);
+        }
+        .nav-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 18px 0 8px 0;
+        }
+        .nav-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+        }
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.08rem;
+            font-weight: 500;
+            padding: 6px 18px;
+            border-radius: 18px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.18);
+            color: #ffe6f7;
+        }
+        footer {
+            width: 100%;
+            background: linear-gradient(90deg, #7b2ff2 0%, #43cea2 100%);
+            color: #fff;
+            padding: 16px 0;
+            text-align: center;
+            font-size: 1rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 -2px 12px rgba(123,47,242,0.10);
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-container {
+            background: rgba(255,255,255,0.95);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(67,206,162,0.15);
+            padding: 48px 36px;
+            max-width: 420px;
+            text-align: center;
+        }
+        h1 {
+            color: #7b2ff2;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+        p {
+            color: #185a9d;
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+        }
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 18px rgba(123,47,242,0.13);
+        }
+    </style>
 </head>
 <body>
-    12345
-</body>
-</html>
-
-
-
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-title">Mood Maket</div>
+            <div class="nav-menu">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="About.html">เกี่ยวกับ</a>
+                <a href="Products.html">สินค้า</a>
+                <a href="article.html">บทความ</a>
+                <a href="contack.html">ช่องทางการติดต่อ</a>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="about-container">
+            <img src="https://i.imgur.com/8Km9tLL.png" alt="Avatar" class="avatar">
+            <h1>เกี่ยวกับฉัน</h1>
+            <p>สวัสดีค่ะ! ฉันชื่อ [ชื่อของคุณ] เป็นผู้สร้าง Mood Maket<br>
+            ชอบแบ่งปันความสุขและแรงบันดาลใจให้กับทุกคน<br>
+            หวังว่าเว็บไซต์นี้จะช่วยเติมเต็มวันดีๆ ให้กับคุณนะคะ 😊</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Mood Maket | สร้างแรงบันดาลใจในทุกวันของคุณ
