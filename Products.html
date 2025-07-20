@@ -3,9 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Products - สินค้ายอดฮิต</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #E3D095 0%, #7965C1 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(72,58,160,0.10);
+        }
+        h1 {
+            text-align: center;
+            color: #483AA0;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .product-card {
+            background: #E3D095;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(72,58,160,0.08);
+            padding: 18px 16px 14px 16px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.15s;
+            border: 2px solid #7965C1;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(72,58,160,0.13);
+            background: #fffbe6;
+        }
+        .product-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 2px solid #7965C1;
+            background: #fff;
+        }
+        .product-name {
+            font-weight: bold;
+            color: #483AA0;
+            margin-bottom: 6px;
+            font-size: 1.1em;
+        }
+        .product-desc {
+            color: #0E2148;
+            font-size: 0.98em;
+            margin-bottom: 0;
+        }
+        .product-price {
+            font-size: 1.1rem;
+            color: #7965C1;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        @media (max-width: 900px) {
+            .products-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                padding: 28px 8vw 18px 8vw;
+            }
+        }
+    </style>
 </head>
 <body>
-    12345
+    <div class="container">
+        <h1>สินค้ายอดฮิต ตกแต่งบ้านน่ารักๆ</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img class="product-img" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/vase-1996921_1280.jpg" alt="แจกันดอกไม้เซรามิก">
+                <div class="product-name">แจกันดอกไม้เซรามิก</div>
+                <div class="product-desc">แจกันทรงกลมสีฟ้า เหมาะกับการตกแต่งห้องนั่งเล่นหรือโต๊ะทำงาน</div>
+                <div class="product-price">฿199</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://cdn.pixabay.com/photo/2016/11/29/09/32/animal-1867126_1280.jpg" alt="โคมไฟหมีน้อย">
+                <div class="product-name">โคมไฟหมีน้อย</div>
+                <div class="product-desc">โคมไฟ LED รูปหมีน่ารัก ให้แสงอบอุ่น เหมาะกับห้องนอน</div>
+                <div class="product-price">฿299</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://cdn.pixabay.com/photo/2017/08/06/00/03/cushion-2583692_1280.jpg" alt="หมอนอิงลายเมฆ">
+                <div class="product-name">หมอนอิงลายเมฆ</div>
+                <div class="product-desc">หมอนอิงผ้ากำมะหยี่นุ่มลายเมฆ สีฟ้าสดใส</div>
+                <div class="product-price">฿159</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://cdn.pixabay.com/photo/2016/11/29/09/16/clock-1867011_1280.jpg" alt="นาฬิกาแขวนผนัง">
+                <div class="product-name">นาฬิกาแขวนผนัง</div>
+                <div class="product-desc">นาฬิกาแขวนดีไซน์มินิมอล สีฟ้าอ่อน ดูเรียบง่าย</div>
+                <div class="product-price">฿249</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://cdn.pixabay.com/photo/2017/08/06/00/03/cushion-2583693_1280.jpg" alt="กระถางต้นไม้จิ๋ว">
+                <div class="product-name">กระถางต้นไม้จิ๋ว</div>
+                <div class="product-desc">กระถางต้นไม้ขนาดเล็ก เหมาะสำหรับวางบนโต๊ะหรือชั้นวางของ</div>
+                <div class="product-price">฿89</div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/vase-1996922_1280.jpg" alt="กรอบรูปไม้">
+                <div class="product-name">กรอบรูปไม้</div>
+                <div class="product-desc">กรอบรูปไม้สีฟ้าอ่อน เพิ่มความอบอุ่นให้บ้าน</div>
+                <div class="product-price">฿129</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
