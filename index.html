@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -30,13 +29,15 @@
       letter-spacing: 2px;
       text-shadow: 1px 2px 8px rgba(72,58,160,0.13);
       color: #E3D095;
+      margin-left: 40px;
     }
     .menu {
       list-style: none;
       display: flex;
-      gap: 32px;
+      gap: 24px;
       margin: 0;
       padding: 0;
+      align-items: center;
     }
     .menu li {
       display: inline;
@@ -151,9 +152,13 @@
       color: #E3D095;
       text-align: center;
       padding: 18px 10px 12px 10px;
-      margin-top: 48px;
       font-size: 1em;
       letter-spacing: 1px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
     }
     @media (max-width: 900px) {
       .products {
@@ -168,62 +173,23 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Mood Maket</div>
     <ul class="menu">
-      <li><a href="#">หน้าแรก</a></li>
-      <li><a href="#about">เกี่ยวกับ</a></li>
-      <li><a href="#products">สินค้า</a></li>
-      <li><a href="#contact">ติดต่อ</a></li>
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="Products.html">สินค้า</a></li>
+      <li><a href="article.html">บทความ</a></li>
+      <li><a href="contack.html">ช่องทางติดต่อ</a></li>
+      <li><a href="About.html">เกี่ยวกับ</a></li>
     </ul>
+    <div class="logo">Mood Maket</div>
   </nav>
   <section class="hero">
     <img class="hero-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Mood Maket">
     <div class="hero-title">Mood Maket</div>
     <div class="hero-desc">ร้านไลฟ์สไตล์และของขวัญสุดชิค<br>สร้างแรงบันดาลใจและความสุขในทุกวัน</div>
-  </section>
-  <section class="section" id="about">
-    <h2>เกี่ยวกับร้าน</h2>
-    <p style="font-size:1.08em; color:#333; line-height:1.7;">
-      Mood Maket คือร้านที่รวบรวมของตกแต่งบ้าน เครื่องเขียน ของขวัญ และสินค้าไลฟ์สไตล์ที่คัดสรรมาอย่างดี<br>
-      เน้นดีไซน์ทันสมัย คุณภาพเยี่ยม และบรรยากาศอบอุ่น เหมาะกับทุกเพศทุกวัย<br>
-      พบกับโปรโมชั่นและกิจกรรมสร้างแรงบันดาลใจตลอดปี
-    </p>
-  </section>
-  <section class="section" id="products">
-    <h2>สินค้าแนะนำ</h2>
-    <div class="products">
-      <div class="product-card">
-        <img class="product-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="ของตกแต่งบ้าน">
-        <div class="product-title">ของตกแต่งบ้าน</div>
-        <div class="product-desc">เพิ่มบรรยากาศให้บ้านของคุณด้วยของตกแต่งดีไซน์เก๋</div>
-      </div>
-      <div class="product-card">
-        <img class="product-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="เครื่องเขียน">
-        <div class="product-title">เครื่องเขียน</div>
-        <div class="product-desc">เครื่องเขียนน่ารัก สีสันสดใส เหมาะกับทุกวัย</div>
-      </div>
-      <div class="product-card">
-        <img class="product-img" src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="ของขวัญ">
-        <div class="product-title">ของขวัญ</div>
-        <div class="product-desc">ของขวัญสุดพิเศษสำหรับคนสำคัญในทุกโอกาส</div>
-      </div>
-      <div class="product-card">
-        <img class="product-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="สินค้าไลฟ์สไตล์">
-        <div class="product-title">สินค้าไลฟ์สไตล์</div>
-        <div class="product-desc">ไอเท็มเสริมความสุขและแรงบันดาลใจในชีวิตประจำวัน</div>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="contact">
-    <h2>ติดต่อเรา</h2>
-    <div class="contact">
-      โทร: 02-123-4567<br>
-      อีเมล: moodmaket@email.com<br>
-      Facebook: <a href="#" style="color:#3498db; text-decoration:underline;">Mood Maket</a>
-    </div>
+    <a href="contack.html" class="cta-btn">ชมสินค้า</a>
   </section>
   <footer>
     &copy; 2025 Mood Maket. All rights reserved.
   </footer>
-</body>
+ </body>
 </html>
