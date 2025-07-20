@@ -1,11 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOOD MAKET - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: #333;
+      background-color: #fff;
+      padding-top: 80px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .menu li a.active,
+    .menu li a:hover {
+      color: #333;
+    }
+
+    .menu li a.active::after,
+    .menu li a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #000;
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.2rem;
+    }
+
+    .icons a {
+      color: #000;
+      position: relative;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+
+    /* Hero */
+    .hero {
+  background: url('./img/1.jpg') center center/cover no-repeat;
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      background: rgba(255,255,255,0.97);
+      border-radius: 24px;
+      padding: 40px 40px 32px 40px;
+      box-shadow: 0 4px 32px rgba(123,47,242,0.10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 12px 28px;
+      border: none;
+      color: #fff;
+      background: linear-gradient(90deg, #7b2ff2 0%, #e3d095 100%);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 24px;
+      font-size: 1.08em;
+      box-shadow: 0 2px 12px rgba(123,47,242,0.10);
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #e3d095 0%, #7b2ff2 100%);
+      color: #fff;
+      box-shadow: 0 4px 24px #7b2ff2;
+      transform: scale(1.07);
+    }
+
+    .product-card {
+      background:#fff;
+      border-radius:24px;
+      box-shadow:0 2px 16px rgba(123,47,242,0.08);
+      padding:32px 24px 28px 24px;
+      text-align:center;
+      transition:box-shadow 0.3s, transform 0.3s;
+      cursor:pointer;
+      position:relative;
+      overflow:hidden;
+    }
+    .product-img {
+      width:100%;
+      max-width:240px;
+      border-radius:18px;
+      margin-bottom:22px;
+      transition:transform 0.3s, box-shadow 0.3s, filter 0.3s;
+      box-shadow:0 2px 12px #e3d095;
+      z-index: 1;
+      position: relative;
+  }
+  </style>
 </head>
 <body>
-    12345
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MOOD MAKET</div>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="icons">
+        <a href="#"><i class="fa fa-search"></i></a>
+        <a href="#" class="cart"><i class="fa fa-shopping-cart"></i><span class="cart-count">0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Decorate Your Home with Style</h1>
+      <p>Discover beautiful home decor, accessories, and lifestyle products to make your space truly yours.</p>
+      <a href="#products" class="btn-primary">Shop now</a>
+    </div>
+  </section>
+
+
+  <!-- Product Grid -->
+  <section id="products" style="padding:60px 0 40px 0; background:#fafafa;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <h2 style="font-size:2em;font-weight:700;color:#333;margin-bottom:32px;text-align:center;">Popular Home Decor Products</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;">
+        <div class="product-card">
+          <img class="product-img" src="./img/1.jpg" alt="แจกันดอกไม้">
+          <div class="product-title">แจกันดอกไม้เซรามิก</div>
+          <div class="product-desc">แจกันทรงกลมสีฟ้า ดีไซน์มินิมอล เหมาะกับทุกมุมบ้าน เพิ่มความสดชื่นและความสงบให้กับพื้นที่ของคุณ</div>
+          <div class="product-price">฿199</div>
+        </div>
+        <div class="product-card">
+          <img class="product-img" src="./img/2.jpg" alt="เครื่องเขียน">
+          <div class="product-title">เครื่องเขียนลายเก๋</div>
+          <div class="product-desc">เครื่องเขียนดีไซน์ทันสมัย สีสันสดใส เหมาะสำหรับตกแต่งโต๊ะทำงานหรือมอบเป็นของขวัญ</div>
+          <div class="product-price">฿89</div>
+        </div>
+        <div class="product-card">
+          <img class="product-img" src="./img/3.jpg" alt="ของขวัญ">
+          <div class="product-title">ของขวัญสุดพิเศษ</div>
+          <div class="product-desc">กล่องของขวัญดีไซน์หรู สำหรับโอกาสพิเศษ มาพร้อมการ์ดอวยพรและริบบิ้นสวยงาม</div>
+          <div class="product-price">฿299</div>
+        </div>
+        <div class="product-card">
+          <img class="product-img" src="./img/4.jpg" alt="สินค้าไลฟ์สไตล์">
+          <div class="product-title">สินค้าไลฟ์สไตล์</div>
+          <div class="product-desc">ไอเท็มเสริมความสุขและแรงบันดาลใจ เช่น หมอนอิงลายสวย โคมไฟตั้งโต๊ะ และกรอบรูปตกแต่ง</div>
+          <div class="product-price">฿159</div>
+        </div>
+        <div class="product-card">
+          <img class="product-img" src="./img/5.jpg" alt="เทียนหอมอโรม่า">
+          <div class="product-title">เทียนหอมอโรม่า</div>
+          <div class="product-desc">เทียนหอมกลิ่นลาเวนเดอร์ ช่วยสร้างบรรยากาศผ่อนคลาย เหมาะสำหรับห้องนอนหรือห้องน้ำ</div>
+          <div class="product-price">฿129</div>
+        </div>
+        <div class="product-card">
+          <img class="product-img" src="./img/6.jpg" alt="กระถางต้นไม้เซรามิก">
+          <div class="product-title">กระถางต้นไม้เซรามิก</div>
+          <div class="product-desc">กระถางต้นไม้ขนาดเล็ก ดีไซน์มินิมอล เหมาะสำหรับวางบนโต๊ะหรือชั้นวาง เพิ่มความสดชื่นให้บ้าน</div>
+          <div class="product-price">฿179</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+</body>
+<!-- Footer -->
+<footer style="background:#f5f5fa;padding:36px 0 18px 0;margin-top:48px;box-shadow:0 -2px 12px rgba(123,47,242,0.07);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;">
+    <div style="font-size:1.3em;font-weight:700;color:#7b2ff2;letter-spacing:1px;">MOOD MAKET</div>
+    <div style="color:#333;font-size:1em;">
+      <span style="margin-right:18px;"><i class="fa fa-map-marker-alt" style="color:#7b2ff2;margin-right:6px;"></i>กรุงเทพฯ, ประเทศไทย</span>
+      <span style="margin-right:18px;"><i class="fa fa-envelope" style="color:#7b2ff2;margin-right:6px;"></i>info@moodmaket.com</span>
+      <span><i class="fa fa-phone" style="color:#7b2ff2;margin-right:6px;"></i>099-999-9999</span>
+    </div>
+  </div>
+  <div style="text-align:center;color:#888;font-size:0.98em;margin-top:18px;">
+    &copy; 2025 MOOD MAKET. All rights reserved.
+  </div>
+</footer>
 </html>
