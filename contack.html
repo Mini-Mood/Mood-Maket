@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา | Mood Maket</title>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .overlay {
+            background: rgba(255,255,255,0.85);
+            min-height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 0;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+            background-size: cover;
+            color: #111;
+            padding: 48px 0 24px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(72,58,160,0.08);
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #E3D095;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(72,58,160,0.10);
+        }
+        .logo-icon svg {
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #111;
+            letter-spacing: 2px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            margin-top: 12px;
+        }
+        nav a {
+            color: #111;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #7965C1;
+        }
+        main {
+            max-width: 520px;
+            margin: 56px auto 0 auto;
+            background: rgba(255,255,255,0.97);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(72,58,160,0.13);
+            padding: 38px 32px 30px 32px;
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            color: #483AA0;
+            text-align: center;
+            margin-bottom: 32px;
+            letter-spacing: 1px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: 1.1rem;
+            margin-bottom: 22px;
+            color: #483AA0;
+            display: flex;
+            align-items: center;
+        }
+        li svg {
+            margin-right: 12px;
+            min-width: 22px;
+        }
+        strong {
+            color: #7965C1;
+            margin-right: 8px;
+            min-width: 70px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        a.contact-link {
+            color: #483AA0;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        a.contact-link:hover {
+            color: #7965C1;
+        }
+        .line-id {
+            background: #E3D095;
+            color: #483AA0;
+            padding: 2px 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-left: 4px;
+        }
+        .contact-form {
+            background: #E3D095;
+            border-radius: 14px;
+            padding: 28px 18px 18px 18px;
+            margin-top: 48px;
+            box-shadow: 0 2px 12px rgba(72,58,160,0.07);
+        }
+        .contact-form h3 {
+            color: #483AA0;
+            text-align: center;
+            margin-bottom: 18px;
+            margin-top: 0;
+        }
+        .contact-form label {
+            display: block;
+            color: #483AA0;
+            font-weight: bold;
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        .contact-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: #483AA0;
+            color: #E3D095;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #7965C1;
+        }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: #483AA0;
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            background: #f5f4f4;
+            padding: 18px 0 12px 0;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 -2px 8px rgba(72,58,160,0.06);
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 20px 8px;
+            }
+            .contact-form {
+                padding: 16px 4px 10px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="logo">
+            <span class="logo-icon">
+                <!-- โลโก้รูปบ้านตกแต่ง -->
+                <svg viewBox="0 0 48 48" fill="none">
+                    <rect x="8" y="20" width="32" height="18" rx="4" fill="#7965C1"/>
+                    <rect x="18" y="28" width="12" height="10" rx="2" fill="#E3D095"/>
+                    <polygon points="24,8 6,22 10,22 10,38 38,38 38,22 42,22" fill="#E3D095" stroke="#7965C1" stroke-width="2"/>
+                    <rect x="22" y="32" width="4" height="6" rx="1" fill="#7965C1"/>
+                </svg>
+            </span>
+            <span class="logo-text">Mood Maket</span>
+        </div>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="contack.html">ติดต่อ</a>
+        </nav>
+    </header>
+    <main>
+        <h2>ติดต่อเรา</h2>
+        <ul>
+            <li>
+                <!-- Phone icon -->
+                <svg width="22" height="22" fill="#483AA0" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4.5A1 1 0 013 3.5h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+                <strong>โทร:</strong> 081-234-5678
+            </li>
+            <li>
+                <!-- Line icon -->
+                <svg width="22" height="22" fill="#483AA0" viewBox="0 0 24 24"><path d="M19.615 3.184C17.437 1.13 14.13 0 12 0 5.373 0 0 4.477 0 10c0 2.137.84 4.13 2.385 5.816C2.146 18.09.5 21.5.5 21.5s3.41-1.646 5.684-1.885C7.87 22.87 11.13 24 13.615 24c6.627 0 12-4.477 12-10 0-2.137-.84-4.13-2.385-5.816C21.854 5.91 23.5 2.5 23.5 2.5s-3.41 1.646-5.684 1.885z"/></svg>
+                <strong>ไลน์:</strong> <span class="line-id">@moodmaket</span>
+            </li>
+            <li>
+                <!-- Email icon -->
+                <svg width="22" height="22" fill="#483AA0" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"/></svg>
+                <strong>อีเมล:</strong> <a class="contact-link" href="mailto:moodmaket@example.com">moodmaket@example.com</a>
+            </li>
+            <li>
+                <!-- Facebook icon -->
+                <svg width="22" height="22" fill="#483AA0" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+                <strong>เฟสบุ๊ค:</strong> <a class="contact-link" href="https://facebook.com/moodmaket" target="_blank">facebook.com/moodmaket</a>
+            </li>
+            <li>
+                <!-- Address icon -->
+                <svg width="22" height="22" fill="#483AA0" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+                <strong>ที่อยู่:</strong> 123 ถนนสุขใจ แขวงสุขสันต์ เขตสุขุม กรุงเทพฯ 10200
+            </li>
+        </ul>
+        <div style="height:32px"></div>
+        <form class="contact-form">
+            <h3>แบบฟอร์มติดต่อเรา</h3>
+            <label for="name">ชื่อของคุณ</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">ข้อความ</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+    </main>
+    <footer>
+        Mood Maket | ของตกแต่งบ้าน
+    </footer>
+</body>
+</html>
